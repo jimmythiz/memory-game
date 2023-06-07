@@ -1,0 +1,43 @@
+*,body{
+    box-sizing: border-box;
+    white-space: nowrap;
+    margin: 0;
+    padding: 0;
+    background-color: c5ddf4;
+}
+.container{
+    padding: 2rem;
+    display: flex;
+}
+.img{
+    width: 10rem;
+    height: 15rem;
+    margin: 1rem;
+    border: 1px solid black;
+    position: relative;
+}
+.img.has-overlay::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: red;
+    z-index: 1;
+  }
+img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    padding-right: 1rem;
+}
+@media screen and (max-device-width: 1020px){
+    .container{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        margin: 0;
+        text-align: center;
+        padding: 1rem;
+    }
+  }
